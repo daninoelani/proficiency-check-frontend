@@ -3,9 +3,6 @@ import Profile from './components/Profile';
 import './App.css';
 
 class App extends Component {
-  state = {
-    people: []
-  }
 
   componentDidMount() {
     fetch(`http://localhost:4000`)
@@ -20,7 +17,7 @@ class App extends Component {
   render () {
     return (
       <div className="body text-center">
-      <Profile people={this.state.people} />
+      <Profile />
       </div>
     );
   }
