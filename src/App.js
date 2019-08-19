@@ -5,7 +5,7 @@ import './App.css';
 class App extends Component {
 
   componentDidMount() {
-    fetch(`http://localhost:4000`)
+    fetch(`https://tranquil-tundra-90977.herokuapp.com/`)
     .then(res => res.json())
     .then((data) => {
       this.setState({ people: data })

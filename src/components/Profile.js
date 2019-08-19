@@ -9,7 +9,7 @@ const People = () => {
   const [id, setID] = useState('')
 
   const fetchPeople = async () => {
-     fetch('http://localhost:4000')
+     fetch('https://tranquil-tundra-90977.herokuapp.com/')
     .then((res) => res.json())
     .then((people) => setPeople(people))
   }
@@ -26,7 +26,7 @@ const People = () => {
   }
   
   const handleDelete = async id => {
-    await fetch('http://localhost:4000/' + id, {
+    await fetch('https://tranquil-tundra-90977.herokuapp.com/' + id, {
       method: 'DELETE',
     })
     window.location.reload();
@@ -34,7 +34,7 @@ const People = () => {
 
   const handleEdit = async (e, id) => {
     e.preventDefault()
-    await fetch('http://localhost:4000/' + id, {
+    await fetch('https://tranquil-tundra-90977.herokuapp.com/' + id, {
       method: "PUT",
       body: JSON.stringify({ name, location, status }),
       headers: {

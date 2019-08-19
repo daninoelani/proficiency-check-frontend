@@ -8,7 +8,7 @@ const PeopleForm = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault()
 		const data = JSON.stringify({name, location, status})
-		await fetch('http://localhost:4000/', {
+		await fetch('https://tranquil-tundra-90977.herokuapp.com/', {
 			method: 'POST',
 			body: data,
 			headers: {
